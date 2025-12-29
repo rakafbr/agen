@@ -198,6 +198,47 @@ btnScreenshot.addEventListener("click", async () => {
   link.click();
 });
 
+const root = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (!savedTheme) {
+    const preferDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (preferDark) root.setAttribute("data-theme", "dark");
+  }
+
+  if (savedTheme === "dark") {
+    root.setAttribute("data-theme", "dark");
+  }
+
+  function updateThemeLabel(){
+    const isDark = root.getAttribute("data-theme") === "dark";
+    const icon = themeToggle.querySelector(".theme-icon");
+    const text = themeToggle.querySelector(".theme-text");
+
+    if (icon) icon.textContent = isDark ? "☀️" : "🌙";
+    if (text) text.textContent = isDark ? "Light" : "Dark";
+  }
+
+  updateThemeLabel();
+
+  themeToggle.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
+
+    if (isDark) {
+      root.removeAttribute("data-theme");
+      localStorage.setItem("theme","light");
+    } else {
+      root.setAttribute("data-theme","dark");
+      localStorage.setItem("theme","dark");
+    }
+
+    updateThemeLabel();
+  });
+}
+
 function init() {
   loadState();
 

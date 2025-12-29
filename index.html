@@ -14,14 +14,24 @@
   <link rel="stylesheet" href="style.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  
 </head>
 <body>
   <header class="app-header">
-    <div class="brand">
-      <h1>🛒 Agen Alamanda</h1>
+    <div class="header-top">
+      <div class="brand">
+        <h1>🛒 Agen Alamanda</h1>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+        <span class="theme-text">Dark</span>
+      </button>
     </div>
+
     <p class="subtitle">Kalkulasi pesanan sat set tanpa pusing 🤯</p>
   </header>
+
 
   <main class="main">
     <section id="menu-pesanan" class="menu active" aria-labelledby="title-pesanan">
