@@ -65,12 +65,12 @@ body{
 .card-item{
   background:var(--card);
   border-radius:14px;
-  padding:12px;
+  padding:8px;
   display:flex;
   gap:12px;
   align-items:center;
   box-shadow:var(--shadow);
-  transition:transform .12s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-item:hover{transform:translateY(-4px)}
@@ -156,6 +156,7 @@ body{
   padding:16px;
 }
 .modal{
+  position:relative;
   width:100%;
   max-width:720px;
   background:var(--card);
@@ -171,8 +172,8 @@ body{
   border-bottom:1px solid var(--border);
 }
 .modal-body{
-  padding:8px 16px;
-  max-height:60vh;
+  padding:4px 16px;
+  max-height:75vh;
   overflow:auto;
 }
 .receipt-item{
@@ -182,7 +183,7 @@ body{
   border-bottom:1px dashed var(--border);
 }
 .receipt-total{
-  margin-top:12px;
+  padding:8px 0;
   display:flex;
   justify-content:space-between;
 }

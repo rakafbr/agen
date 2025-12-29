@@ -1,4 +1,3 @@
-// Data menu
 const MENU_ITEMS = [
   { id: "cup-injection", name: "Cup Injection", price: 20000, image: "./products/cup-injection.jpg" },
   { id: "paper-cup", name: "Paper Cup", price: 8000, image: "./products/paper-cup.jpg" },
@@ -175,51 +174,29 @@ function setupModalHandlers() {
 const btnScreenshot = document.getElementById("btn-screenshot");
 
 btnScreenshot.addEventListener("click", async () => {
-  const overlay = document.getElementById("overlay");
-  const modal = overlay.querySelector(".modal");
+  const modal = document.querySelector(".modal");
 
-  const rect = modal.getBoundingClientRect();
-  const scale = 2;
-
-  const canvasAll = await html2canvas(overlay, {
-    backgroundColor: null,
-    scale,
+  const canvas = await html2canvas(modal, {
+    backgroundColor: "#ffffff",
+    scale: window.devicePixelRatio || 2,
     useCORS: true,
-    scrollX: -window.scrollX,
-    scrollY: -window.scrollY,
+    scrollX: 0,
+    scrollY: 0,
+    windowWidth: document.documentElement.clientWidth,
+    windowHeight: document.documentElement.clientHeight,
   });
 
-  // crop ke area modal
-  const crop = document.createElement("canvas");
-  crop.width = Math.round(rect.width * scale);
-  crop.height = Math.round(rect.height * scale);
-
-  const ctx = crop.getContext("2d");
-  ctx.drawImage(
-    canvasAll,
-    Math.round(rect.left * scale),
-    Math.round(rect.top * scale),
-    Math.round(rect.width * scale),
-    Math.round(rect.height * scale),
-    0,
-    0,
-    Math.round(rect.width * scale),
-    Math.round(rect.height * scale)
-  );
-
-  // filename: "Struk Pesanan 29 Dec 25.jpg"
-  const dateStr = new Intl.DateTimeFormat("en-GB", {
+  const dateStr = new Intl.DateTimeFormat("id-ID", {
     day: "2-digit",
-    month: "short",
-    year: "2-digit",
+    month: "long",
+    year: "numeric",
   }).format(new Date());
 
   const link = document.createElement("a");
   link.download = `Struk Pesanan ${dateStr}.jpg`;
-  link.href = crop.toDataURL("image/jpeg", 0.95);
+  link.href = canvas.toDataURL("image/jpeg", 0.95);
   link.click();
 });
-
 
 function init() {
   loadState();
