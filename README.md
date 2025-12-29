@@ -9,4 +9,4 @@ This project is a simple web application that features two calculators: "Kalkula
 - **app.js**: Contains the JavaScript logic for the application, including currency formatting, rendering the food menu, managing item quantities, calculating totals, displaying the receipt modal, and handling dynamic form rows.
 
 ## How to Run
-To run the application, simply open the `index.html` file in a web browser. No additional setup is required. Enjoy using the Kalkulator Pesanan and Kalkulator Harga!
+To run the application, simply open the `index.html` file in a web browser. No additional setup is required. Enjoy using the Kalkulator Pesanan and Kalkulator Harga!# agen
