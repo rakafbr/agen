@@ -315,7 +315,7 @@ body{
 .theme-toggle{
   background:var(--bg-surface);
   color:var(--text-color);
-  border:1.25px solid var(--border-color);
+  border:1.25px solid var(--bg-surface);
   padding:8px 12px;
   border-radius:var(--rounded-xl);
   font-size:var(--text-md);
@@ -323,9 +323,7 @@ body{
   cursor:pointer;
   white-space:nowrap;
 }
-.theme-toggle:hover{
-  border-color:var(--primary-color-500);
-}
+
 
 /* ==================== RESPONSIVE ==================== */
 @media (min-width:640px){
