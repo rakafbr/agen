@@ -1,17 +1,14 @@
-/* ==================================================
-   DESIGN TOKENS
-   ================================================== */
-
-/* ---------- LIGHT MODE (DEFAULT) ---------- */
+/* ==================== DESIGN TOKENS ==================== */
+/* -------------------- LIGHT MODE (DEFAULT) -------------------- */
 :root{
-  /* Brand */
+  /* Primary Color */
   --color-brand-100:#F3FCF4;
   --color-brand-300:#84EE8A;
   --color-brand-500:#34C759;
   --color-brand-700:#1A8F4E;
   --color-brand-900:#095F40;
 
-  /* Background / Surfaces */
+  /* Background Color */
   --color-bg:#F5F7F8;
   --color-bg-soft:#F9FAFB;
   --color-surface:#FFFFFF;
@@ -23,7 +20,7 @@
   --color-text-strong:#18203B;
   --color-text-muted:#58688F;
 
-  /* Borders */
+  /* Border */
   --color-border:#DDE3EA;
   --color-border-subtle:rgba(0,0,0,0.06);
   --radius-xs:10px;
@@ -32,7 +29,7 @@
   --radius-lg:16px;
   --radius-xl:100px;
   
-  /* Effects */
+  /* Effect */
   --shadow-xs:0 2px 6px rgba(0,0,0,0.04);
   --shadow-sm:0 2px 6px rgba(0,0,0,0.06);
   --shadow-md:0px 3px 12px rgba(0,0,0,0.10);
@@ -55,16 +52,16 @@
   color-scheme:light;
 }
 
-/* ---------- DARK MODE ---------- */
+/* -------------------- DARK MODE -------------------- */
 [data-theme="dark"]{
-  /* Brand */
+  /* Primary Color */
   --color-brand-100:#060A15;
   --color-brand-300:#84EE8A;
   --color-brand-500:#34C759;
   --color-brand-700:#1A8F4E;
   --color-brand-900:#095F40;
 
-  /* Background / Surfaces */
+  /* Background Color */
   --color-bg:#090E1C;
   --color-bg-soft:#1B2534;
   --color-surface:#101729;
@@ -76,7 +73,7 @@
   --color-text-strong:#D1FAE5;
   --color-text-muted:#798593;
 
-  /* Borders */
+  /* Border */
   --color-border:#283045;
   --color-border-subtle:rgba(255,255,255,0.10);
   --radius-xs:10px;
@@ -85,7 +82,7 @@
   --radius-lg:16px;
   --radius-xl:100px;
 
-  /* Effects */
+  /* Effect */
   --shadow-xs:0 2px 8px rgba(0,0,0,0.35);
   --shadow-sm:0 4px 12px rgba(0,0,0,0.40);
   --shadow-md:0 10px 24px rgba(0,0,0,0.45);
@@ -108,16 +105,11 @@
   color-scheme:dark;
 }
 
-/* ==================================================
-   RESET
-   ================================================== */
-
+/* ==================== RESET ==================== */
 *{box-sizing:border-box}
 html,
-/* ==================================================
-   BASE
-   ================================================== */
 
+/* ==================== BASE ==================== */
 body{
   display:flex;
   flex-direction:column;
@@ -128,10 +120,7 @@ body{
   background:var(--color-bg);
 }
 
-/* ==================================================
-   LAYOUT
-   ================================================== */
-
+/* ==================== LAYOUT ==================== */
 .app-header{
   width:100%;
   max-width:1100px;
@@ -176,12 +165,7 @@ body{
   margin-bottom:88px;
 }
 
-
-
-/* ==================================================
-   COMPONENTS
-   ================================================== */
-
+/* ==================== COMPONENT - CARD ==================== */
 .card-item{
   background:var(--color-surface);
   border-radius:var(--radius-md);
@@ -191,7 +175,6 @@ body{
   align-items:center;
   transition: all 0.3s ease-in-out;
 }
-
 .card-item:hover{transform:translateY(-4px)}
 
 .item-media{
@@ -199,23 +182,11 @@ body{
   background:var(--color-surface-tint);display:flex;align-items:center;justify-content:center;
 }
 .item-media img{width:100%;height:100%;object-fit:cover}
-
 .item-body{flex:1;display:flex;flex-direction:column;gap:6px}
 .item-title{font-weight:var(--semibold)}
 .item-price{color:var(--color-text-muted);font-size:var(--text-lg)}
 
 .qty-controls{display:flex;align-items:center;gap:8px}
-.btn-round{
-  width:36px;height:36px;
-  background:var(--color-bg-soft);
-  border:none;
-  border-radius:var(--radius-xl);
-  display:inline-grid;
-  place-items:center;
-  font-size:var(--text-xl);
-  cursor:pointer;
-}
-.btn-round:focus{outline:4px solid var(--color-brand-100)}
 .qty-display{min-width:28px;text-align:center;font-weight:var(--semibold)}
 
 .sticky-footer{
@@ -243,6 +214,7 @@ body{
 .footer-left .label{font-size:var(--text-md);color:var(--color-text-muted);padding-bottom:4px}
 .total-amount{font-size:var(--text-lg);font-weight:var(--bold);color:var(--color-text)}
 
+/* ==================== COMPONENT - BUTTON ==================== */
 .btn{
   font-size:medium;
   padding:.6rem .9rem;
@@ -264,7 +236,19 @@ body{
 }
 .btn:focus{outline:4px solid rgba(11,178,75,0.30);}
 .btn:disabled{opacity:.55;cursor:not-allowed}
+.btn-round{
+  width:36px;height:36px;
+  background:var(--color-bg-soft);
+  border:none;
+  border-radius:var(--radius-xl);
+  display:inline-grid;
+  place-items:center;
+  font-size:var(--text-xl);
+  cursor:pointer;
+}
+.btn-round:focus{outline:4px solid var(--color-brand-100)}
 
+/* ==================== COMPONENT - POP UP ==================== */
 .overlay{
   position:fixed;
   inset:0;
@@ -325,6 +309,7 @@ body{
   justify-content:center;
 }
 
+/* ==================== DARK MODE ==================== */
 .theme-toggle{
   background:var(--color-surface);
   color:var(--color-text);
@@ -336,15 +321,11 @@ body{
   cursor:pointer;
   white-space:nowrap;
 }
-
 .theme-toggle:hover{
   border-color:var(--color-brand-500);
 }
 
-/* ==================================================
-   RESPONSIVE
-   ================================================== */
-
+/* ==================== RESPONSIVE ==================== */
 @media (min-width:640px){
   .grid{grid-template-columns:repeat(2,1fr)}
 }

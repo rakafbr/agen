@@ -177,7 +177,7 @@ btnScreenshot.addEventListener("click", async () => {
   const modal = document.querySelector(".modal");
 
   const canvas = await html2canvas(modal, {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#FFFFFF",
     scale: window.devicePixelRatio || 2,
     useCORS: true,
     scrollX: 0,
