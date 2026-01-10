@@ -324,6 +324,61 @@ body{
   white-space:nowrap;
 }
 
+/* ==================== DARK MODE ==================== */
+.dark-mode-btn {
+  position:fixed;
+  top:20px;
+  right:20px;
+  width:48px;
+  height:48px;
+  background-color:var(--bg-surface);
+  border:none;
+  border-radius:var(--rounded-xl);
+  font-size:24px;
+  cursor:pointer;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:background-color .5s ease;
+  z-index:1000;
+  transition:border-radius 1s ease;
+}
+.dark-mode-btn:hover{
+  border-radius:var(--rounded-sm);
+}
+.dark-mode-btn .sun {
+  display:none;
+}
+[data-theme="dark"] .dark-mode-btn {
+  background-color:var(--bg-surface);
+}
+[data-theme="dark"] .sun {
+  display:block;
+  animation:fadeIn .5s ease-out forwards;
+}
+[data-theme="dark"] .moon {
+  display:none;
+}
+@keyframes fadeIn {
+  from {
+    opacity:0;
+    transform:scale(0.3);
+  }
+  to {
+    opacity:1;
+    transform:scale(1);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity:1;
+    transform:scale(1);
+  }
+  to {
+    opacity:0;
+    transform:scale(0.3);
+  }
+}
 
 /* ==================== RESPONSIVE ==================== */
 @media (min-width:640px){
@@ -333,11 +388,4 @@ body{
   .grid{grid-template-columns:repeat(3,1fr)}
   .sticky-footer{bottom:24px}
 }
-@media (max-width: 480px){
-  .theme-toggle{
-    padding:8px 10px;
-  }
-  .theme-toggle .theme-text{
-    display:none;
-  }
-}
+

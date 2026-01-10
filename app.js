@@ -198,46 +198,23 @@ btnScreenshot.addEventListener("click", async () => {
   link.click();
 });
 
-const root = document.documentElement;
-const themeToggle = document.getElementById("themeToggle");
+document
+  .getElementById("darkModeToggle")
+  .addEventListener("click", function () {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const moonIcon = document.querySelector("#darkModeToggle .moon");
+    const sunIcon = document.querySelector("#darkModeToggle .sun");
 
-if (themeToggle) {
-  const savedTheme = localStorage.getItem("theme");
-
-  if (!savedTheme) {
-    const preferDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (preferDark) root.setAttribute("data-theme", "dark");
-  }
-
-  if (savedTheme === "dark") {
-    root.setAttribute("data-theme", "dark");
-  }
-
-  function updateThemeLabel(){
-    const isDark = root.getAttribute("data-theme") === "dark";
-    const icon = themeToggle.querySelector(".theme-icon");
-    const text = themeToggle.querySelector(".theme-text");
-
-    if (icon) icon.textContent = isDark ? "☀️" : "🌙";
-    if (text) text.textContent = isDark ? "Light" : "Dark";
-  }
-
-  updateThemeLabel();
-
-  themeToggle.addEventListener("click", () => {
-    const isDark = root.getAttribute("data-theme") === "dark";
-
-    if (isDark) {
-      root.removeAttribute("data-theme");
-      localStorage.setItem("theme","light");
+    if (currentTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "light");
+      sunIcon.style.animation = "fadeOut 0.5s ease-out forwards";
+      moonIcon.style.animation = "fadeIn 0.5s ease-out forwards";
     } else {
-      root.setAttribute("data-theme","dark");
-      localStorage.setItem("theme","dark");
+      document.documentElement.setAttribute("data-theme", "dark");
+      moonIcon.style.animation = "fadeOut 0.5s ease-out forwards";
+      sunIcon.style.animation = "fadeIn 0.5s ease-out forwards";
     }
-
-    updateThemeLabel();
   });
-}
 
 function init() {
   loadState();
