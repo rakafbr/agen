@@ -1,6 +1,6 @@
 const MENU_ITEMS = [
   { id: "cup-injection", name: "Cup Injection", price: 20000, image: "./products/cup-injection.jpg" },
-  //{ id: "paper-cup", name: "Paper Cup", price: 8000, image: "./products/paper-cup.jpg" },
+  { id: "paper-cup", name: "Paper Cup", price: 8000, image: "./products/paper-cup.jpg" },
   //{ id: "plastik", name: "Plastik", price: 8000, image: "./products/plastik.jpg" },
   { id: "indomilk", name: "Indomilk", price: 15000, image: "./products/indomilk.jpg" },
   //{ id: "milo", name: "Milo", price: 19000, image: "./products/milo.jpg" },
