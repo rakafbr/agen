@@ -94,10 +94,28 @@ const MENU_ITEMS = [
     image: "./products/permen-kopiko.jpg",
   },
   {
+    id: "permen-kopiko-stik",
+    name: "Permen Kopiko Stik",
+    price: 15000,
+    image: "./products/permen-kopiko-stik.jpg",
+  },
+  {
     id: "amo-spark",
     name: "Amo Spark",
     price: 22000,
     image: "./products/amo-spark.jpg",
+  },
+  {
+    id: "odeng",
+    name: "Odeng",
+    price: 26000,
+    image: "./products/odeng.jpg",
+  },
+  {
+    id: "chikuwa",
+    name: "Chikuwa",
+    price: 25000,
+    image: "./products/chikuwa.jpg",
   },
 ];
 
