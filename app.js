@@ -106,6 +106,12 @@ const MENU_ITEMS = [
     image: "./products/amo-spark.jpg",
   },
   {
+    id: "makaroni-naruto",
+    name: "Makaroni Naruto",
+    price: 10000,
+    image: "./products/makaroni-naruto.jpg",
+  },
+  {
     id: "odeng",
     name: "Odeng",
     price: 26000,
