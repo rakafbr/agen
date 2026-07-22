@@ -11,7 +11,6 @@ const MENU_ITEMS = [
     price: 8000,
     image: "./products/paper-cup.jpg",
   },
-  //{ id: "plastik", name: "Plastik", price: 8000, image: "./products/plastik.jpg" },
   {
     id: "indomilk",
     name: "Indomilk",
@@ -51,9 +50,6 @@ const MENU_ITEMS = [
     price: 13000,
     image: "./products/nabati-pasta.jpg",
   },
-  //{ id: "nabati-rolls", name: "Nabati Rolls", price: 9000, image: "./products/nabati-rolls.jpg" },
-  //{ id: "brownies-crispy", name: "Brownies Crispy", price: 20000, image: "./products/brownies-crispy.jpg" },
-  //{ id: "chimi", name: "Chimi", price: 18000, image: "./products/chimi.jpg" },
   {
     id: "beng-beng",
     name: "Beng-Beng",
@@ -71,6 +67,24 @@ const MENU_ITEMS = [
     name: "Slai O'lai",
     price: 16000,
     image: "./products/slai-o'lai.jpg",
+  },
+  {
+    id: "sari-gandum",
+    name: "Sari Gandum",
+    price: 21000,
+    image: "./products/sari-gandum.jpg",
+  },
+  {
+    id: "arden",
+    name: "Arden",
+    price: 18000,
+    image: "./products/arden.jpg",
+  },
+  {
+    id: "kelapa-cream",
+    name: "Kelapa Cream",
+    price: 21000,
+    image: "./products/kelapa-cream.jpg",
   },
   {
     id: "malkist",
@@ -96,7 +110,7 @@ const MENU_ITEMS = [
   {
     id: "permen-kopiko-stik",
     name: "Permen Kopiko Stik",
-    price: 15000,
+    price: 16000,
     image: "./products/permen-kopiko-stik.jpg",
   },
   {
@@ -104,6 +118,12 @@ const MENU_ITEMS = [
     name: "Amo Spark",
     price: 22000,
     image: "./products/amo-spark.jpg",
+  },
+  {
+    id: "sogo",
+    name: "Sogo",
+    price: 16500,
+    image: "./products/sogo.jpg",
   },
   {
     id: "makaroni-naruto",
