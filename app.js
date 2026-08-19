@@ -1,22 +1,12 @@
 const MENU_ITEMS = [
-  {
-    id: "cup-injection",
-    name: "Cup Injection",
-    price: 20000,
-    image: "./products/cup-injection.jpg",
-  },
+  //{id: "cup-injection", name: "Cup Injection", price: 20000, image: "./products/cup-injection.jpg" },
   {
     id: "paper-cup",
     name: "Paper Cup",
     price: 8000,
     image: "./products/paper-cup.jpg",
   },
-  {
-    id: "indomilk",
-    name: "Indomilk",
-    price: 15000,
-    image: "./products/indomilk.jpg",
-  },
+  //{id: "indomilk", name: "Indomilk", price: 15000, image: "./products/indomilk.jpg" },
   //{ id: "milo", name: "Milo", price: 19000, image: "./products/milo.jpg" },
   //{ id: "gula", name: "Gula", price: 17500, image: "./products/gula.jpg" },
   {
@@ -93,8 +83,19 @@ const MENU_ITEMS = [
     image: "./products/malkist.jpg",
   },
   //{id: "choki-choki", name: "Choki-Choki", price: 17000, image: "./products/choki-choki.jpg",},
-  //{ id: "astor", name: "Astor", price: 17000, image: "./products/astor.jpg"},
-  //{ id: "fruta-gummy", name: "Fruta Gummy", price: 18000, image: "./products/fruta-gummy.jpg" },
+  { id: "astor", name: "Astor", price: 17000, image: "./products/astor.jpg" },
+  {
+    id: "fruta-gummy",
+    name: "Fruta Gummy",
+    price: 18000,
+    image: "./products/fruta-gummy.jpg",
+  },
+  {
+    id: "frutivit",
+    name: "Frutivit",
+    price: 17000,
+    image: "./products/frutivit.jpg",
+  },
   {
     id: "permen-kis",
     name: "Permen Kis",
