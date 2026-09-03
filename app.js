@@ -135,7 +135,7 @@ const MENU_ITEMS = [
   {
     id: "odeng",
     name: "Odeng",
-    price: 26000,
+    price: 25000,
     image: "./products/odeng.jpg",
   },
   {
